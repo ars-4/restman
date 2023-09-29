@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="restman.png" type="image/png">
+    <title>Restman - We hail REST</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <div class="side-bar">
+        <div class="logo">
+            <img src="restman.png" alt="restmanLogo" width="60px">
+            <h1>Restman</h1>
+        </div>
+        <hr>
+        <div class="links">
+            <span>History</span>
+            <button onclick="clearHistory()">Clear</button>
+        </div>
+        <div class="history">
+            
+        </div>
+    </div>
+    <div class="main">
+        <div class="form-group">
+            <select>
+                <option value="get">Get</option>
+                <option value="post">Post</option>
+                <option value="put">Put</option>
+                <option value="patch">Patch</option>
+                <option value="delete">Delete</option>
+            </select>
+            <input type="text" placeholder="url">
+            <button onclick="submitRequest()">Sumbit</button>
+            <button onclick="openDevTools()">Open Dev Tools</button>
+        </div>
+        <hr>
+        <div class="input-tabs">
+            <div class="tabs" onclick="activate_tab(event)">
+                <button>headers</button>
+                <button>params</button>
+                <button>body</button>
+            </div>
+            <div class="tab-divs">
+                <div class="headers tab active">
+                    <div class="input-group header">
+                        <input type="text" placeholder="header" value="Content-Type">
+                        <input type="text" placeholder="value" value="application/json">
+                    </div>
+                    <button onclick="addHeader()">Add</button>
+                </div>
+                <div class="params tab">
+                    <div class="input-group param">
+                        <input type="text" placeholder="param">
+                        <input type="text" placeholder="value">
+                    </div>
+                    <button onclick="addParam()">Add</button>
+                </div>
+                <div class="body tab">
+                    <a class="pretty-btn" onclick="prettify()">JSON.parse()</a>
+                    <textarea cols="30" rows="10" placeholder="{'data':'value'}"></textarea>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="console">
+            <pre class="json-response"></pre>
+            <div class="text-response"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

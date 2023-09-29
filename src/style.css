@@ -1,0 +1,166 @@
+body {
+    background-color: #242424;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: 'Rubik', 'Roboto', sans-serif;
+}
+
+button {
+    cursor: pointer;
+    padding: 8px 15px;
+    border: none;
+    background-color: #f44336;
+    font-weight: bolder;
+    color: #fff;
+    border-radius: 4px;
+}
+
+*,
+body {
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+body .side-bar {
+    width: 25%;
+    border-right: 2px solid #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body .side-bar .logo {
+    text-align: left;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.side-bar .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+}
+
+.side-bar .history .history_item {
+    cursor: pointer;
+    word-break: keep-all;
+    text-wrap: nowrap;
+}
+
+
+body .main {
+    width: 75%;
+    margin-left: 25%;
+}
+
+body .main .form-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 95%;
+    padding: 10px 15px;
+}
+
+body .main .form-group input {
+    width: 45%;
+}
+
+body .main .form-group input,
+body .main .form-group select,
+body .main .form-group select option,
+body .main .form-group button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    margin: 0px 4px;
+    border: none;
+    font-weight: bolder;
+}
+
+body .main .form-group select {
+    width: 15%;
+    padding: 9px 15px;
+}
+
+body .main .input-tabs {
+    padding: 8px 15px;
+}
+
+body .main .input-tabs .tabs {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+}
+
+body .main .input-tabs .tabs button {
+    margin: 4px;
+}
+
+body .main .input-tabs .tab-divs .tab {
+    display: none;
+    width: 100%;
+}
+
+body .main .input-tabs .tab-divs .tab.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+body .main .input-tabs .tab-divs .tab .input-group {
+    width: 100%;
+}
+
+body .main .input-tabs .tab-divs .tab .input-group input {
+    width: 30%;
+    padding: 10px 15px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    margin: 4px 4px;
+}
+
+body .main .input-tabs .tab-divs .tab textarea {
+    width: 95%;
+    aspect-ratio: 4/1;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    outline: none;
+}
+
+body .main .input-tabs .tab-divs .tab .pretty-btn {
+    cursor: pointer;
+    color: #f44336;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 10px 0px;
+}
+
+body .main .input-tabs .tab-divs .tab button {
+    margin: 4px;
+}
+
+body .main .console {
+    overflow-y: scroll;
+    height: 300px;
+    padding: 10px 15px;
+}
